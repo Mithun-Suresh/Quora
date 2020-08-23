@@ -28,7 +28,7 @@ public class AdminController {
     public ResponseEntity < UserDeleteResponse > userDelete(@PathVariable("userId") final String userUuid, @RequestHeader("authorization") final String accessToken) throws AuthorizationFailedException, UserNotFoundException {
 
         // Logic to handle Bearer <accesstoken>
-        // User can give only Access token or Bearer <accesstoken> as input.
+        // User can give only Access token or Bearer <accesstoken> as input
         String bearerToken = null;
         try {
             bearerToken = accessToken.split("Bearer ")[1];
